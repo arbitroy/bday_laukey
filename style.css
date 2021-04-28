@@ -54,5 +54,24 @@ span {
     color: rgba(255,255,255,0);
     animation: cake 1s 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
 }
+@media(max-width: 768px) {
+    canvas {
+        height: auto;
+        width: auto;
+    }
+    .cake {
+        font-size: auto;
+        z-index: 1;
+    }
+}
+@media(max-width: 500px){
+    canvas {
+        height: auto;
+        width: auto;
+    }
+    .cake {
+        font-size: auto;
+    }
+}
 
 
