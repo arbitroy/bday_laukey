@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    background: #020202;
+    cursor: crosshair;
+}
+canvas{
+    display: inline-block;
+}
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.521);
+    font-family: "Pacifico", cursive;
+    font-size: 5em;
+    font-weight: 900; 
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+    --interval: 1s;
+    display: block;
+    text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+    will-change: filter, color;
+    filter: saturate(60%);
+    animation: flicker steps(100) var(--interval) 1s infinite;
+    color: azure;
+    --color1: azure;
+    --color2: aqua;
+    --color3: dodgerblue;
+    --color4: blue;
+}
+span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@keyframes cake {
+    to {
+    font-size: 28em;
+    color: rgb(19, 122, 153);
+    }
+}
+.fa-birthday-cake {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+    font-size: 5em;
+    color: rgba(255,255,255,0);
+    animation: cake 1s 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+}
+
+
