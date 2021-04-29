@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 body {
     margin: 0;
     background: #020202;
@@ -8,7 +13,7 @@ canvas{
 }
 h1 {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(255, 255, 255, 0.521);
@@ -18,7 +23,7 @@ h1 {
     text-align: center;
     -webkit-user-select: none;
     user-select: none;
-    --interval: 1s;
+    --interval: 2s;
     display: block;
     text-shadow: 
     0 0 10px var(--color1),
@@ -33,6 +38,7 @@ h1 {
     --color2: aqua;
     --color3: dodgerblue;
     --color4: blue;
+    padding: 10px;
 }
 span {
     display: inline-block;
@@ -47,30 +53,49 @@ span {
 }
 .fa-birthday-cake {
     position: absolute;
+    top: 90%;
     left: 50%;
-    top: 70%;
     transform: translate(-50%,-50%);
     font-size: 5em;
     color: rgba(255,255,255,0);
     animation: cake 1s 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
 }
 @media(max-width: 768px) {
-    canvas {
-        height: auto;
-        width: auto;
+    h1 {
+        justify-self: center;
+        font-size: 60px;
+        position: relative;
+        top:20%;
+        left: 50%;
+        margin: auto;
     }
-    .cake {
-        font-size: auto;
-        z-index: 1;
+    span {
+        vertical-align: bottom;
+    }
+    @keyframes cake {
+        to {
+            font-size: 28em;
+            color: rgba(19, 122, 153, 0);
+        }
     }
 }
 @media(max-width: 500px){
-    canvas {
-        height: auto;
-        width: auto;
+    h1 {
+        justify-self: center;
+        font-size: 60px;
+        position: relative;
+        top:20%;
+        left: 50%;
+        margin: auto;
     }
-    .cake {
-        font-size: auto;
+    span {
+        vertical-align: bottom;
+    }
+    @keyframes cake {
+        to {
+            font-size: 28em;
+            color: rgba(19, 122, 153, 0);
+        }
     }
 }
 
